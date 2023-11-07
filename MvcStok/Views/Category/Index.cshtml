@@ -1,0 +1,25 @@
+﻿@using MvcStok.Models.Entity
+@model List<TBLKATEGORILER>
+
+<table class="table table-bordered ">
+    <tr>
+        <th>KATEGORİ ID</th>
+        <th>KATEGORİ ADI</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+    </tr>
+    <tbody>
+        @foreach (var ktgr in Model)
+        {
+            <tr>
+                <th>@ktgr.KATEGORID</th>
+                <td>@ktgr.KATEGORIAD</td>
+                <td><a href="@Url.Action("SIL","CATEGORY")/@ktgr.KATEGORID" class="btn btn-danger">SİL</a></td>
+                <td><a href="@Url.Action("GUNCELLE","CATEGORY")/@ktgr.KATEGORID" class="btn btn-success">GÜNCELLE</a></td>
+
+
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="@Url.Action("YeniKategori")" class="btn btn-primary">YENİ KATEGORİ EKLE</a>
