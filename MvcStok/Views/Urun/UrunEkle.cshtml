@@ -17,7 +17,7 @@
 
     <div>
         <label>Kategori Seçiniz</label>
-        @Html.DropDownListFor(m=> m.TBLKATEGORILER.KATEGORID,(List<SelectListItem>)ViewBag.dgr, new {@class= "form-control"})
+        @Html.DropDownListFor(m => m.TBLKATEGORILER.KATEGORID, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })
 
 
     </div>
@@ -37,4 +37,6 @@
     </div>
 
 </form>
+<a href="/Urun/Index/" class="btn btn-danger">GERİ</a>
+
 
