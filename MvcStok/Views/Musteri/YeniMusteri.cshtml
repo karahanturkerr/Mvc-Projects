@@ -1,4 +1,4 @@
-﻿
+﻿@model MvcStok.Models.Entity.TBLMUSTERILER
 @{
     ViewBag.Title = "YeniMusteri";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
@@ -6,8 +6,9 @@
 
 <form class="form-group" method="post">
     <div>
-        <label>Müşteri Adı</label>
-        <input type="text" class="form-control" name="MUSTERIAD" />
+        <label>Kategori Adı</label>
+        @Html.TextBoxFor(m => m.MUSTERIAD,  new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.MUSTERIAD, "", new { @style = "color : green" })
 
     </div>
 
